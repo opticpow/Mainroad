@@ -7,11 +7,6 @@
 			{{- if or (not .Date.IsZero) .Params.categories }}<div class="post__meta meta">{{ partial "post_meta.html" . }}</div>{{ end }}
 		</header>
 		<div class="post__content clearfix">
-			{{- if .Params.thumbnail }}
-			<figure class="post__thumbnail">
-				<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
-			</figure>
-			{{- end }}
 			{{ .Content }}
 		</div>
 		{{ partial "post_tags.html" . }}
